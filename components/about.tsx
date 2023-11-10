@@ -13,31 +13,31 @@ export default function About() {
     >
       <SectionHeading>About me</SectionHeading>
       
-      <p className="mb-3">
+      <p className="mb-3 text-gray-400 text-md">
         I'm a passionate{" "}
-        <span className="font-medium">software developer</span>, with a fresh perspective
-        and strong foundation in <span className="font-medium italic underline">full-stack development</span>. 
+        <span className="text-gray-300">software developer</span>, with a fresh perspective
+        and strong foundation in <span className="text-gray-300">full-stack development</span>. 
         I recently graduated with a degree in {" "}
-        <span className="font-medium">Information Techology</span>{" "}from Monash University.
-        <span className="italic"> My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
+        <span className="text-gray-300">Information Techology</span>{" "}from Monash University.
+        <span className=""> My favorite part of programming</span> is the
+        problem-solving aspect. I <span className="">love</span> the
         feeling of finally figuring out a solution to a problem. My core stack
         is{" "}
-        <span className="font-medium">
+        <span className="text-gray-300">
           React, Next.js, Node.js, and MongoDB
         </span>
         . I am also familiar with TypeScript and Prisma. I am always looking to
         learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software/web
+        <span className="text-gray-300">full-time position</span> as a software/web
         developer.
       </p>
 
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy building computers, 
+      <p className="text-gray-400 text-md">
+        <span className="">When I'm not coding</span>, I enjoy building computers, 
         mixing music, and playing eight-ball. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
+        <span className="text-gray-300">learning new things</span>. I am currently
         learning {" "}
-        <span className="font-medium">Next.js</span>.
+        <span className="text-gray-300">Next.js</span>.
       </p>
     </motion.section>
   );

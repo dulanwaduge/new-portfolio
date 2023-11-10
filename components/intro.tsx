@@ -23,7 +23,7 @@ export default function Intro
                     }}>
                     <Image src='/profilepicture.png' alt='profilepicture' 
                         width={150} height={150} quality={95} priority={true}
-                        className='h-24 w-24 rounded-full border-[0.35rem] object-cover border-white shadow-xl'/>
+                        className='h-24 w-24 rounded-full border-[0.35rem] object-cover border-[#059669] shadow-xl'/>
                 </motion.div>
                 <motion.span className='absolute bottom-0 right-0 text-4xl'
                     initial={{opacity: 0, scale:0}}
@@ -42,7 +42,7 @@ export default function Intro
         <motion.h1 className='mb-10 mt-4 px-4 text-2xl !leading-[1.5] sm:text-4xl'
                     initial={{opacity: 0, y:100}} 
                     animate={{opacity: 1, y: 1}}>
-            <span className="font-bold">Hello, I'm Dulan.</span> I'm a{" "}
+            <span>Hello, I'm </span><span className="font-bold text-white">Dulan Waduge</span>. I'm a{" "}
             <span className="font-bold">graduate developer</span> looking to{" "}
             <span className="font-bold">kickstart</span> my career. I enjoy
                 building <span className="italic">sites & apps</span>. My focus is{" "}
@@ -56,20 +56,20 @@ export default function Intro
                         delay: 0.1,
                     }}
                 >
-            <Link href="#contact" className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full 
-                                                outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'>
+            <Link href="#contact" className='group bg-[#059669] text-white px-7 py-3 flex items-center gap-2 rounded-full 
+                                                outline-none focus:scale-110 hover:scale-110 hover:bg-gray-800 active:scale-105 transition'>
                 Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
             </Link>
-            <a className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 
-                             active:scale-105 transition cursor-pointer border border-black/10' href='/cv.pdf' download>
+            <a className='group bg-white text-[#059669] px-7 py-3 flex items-center gap-2 rounded-full outline-none  focus:scale-110 hover:scale-110 
+                             active:scale-105 transition cursor-pointer border border-black/10 hover:text-gray-950' href='/cv.pdf' download>
                 Download CV <HiDownload className='opacity-60 group-hover:translate-y-1 transition'/>
             </a>
-            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] 
+            <a className='bg-white p-4 text-[#059669] flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] 
                             hover:text-gray-950 active:scale-105 transition border border-black/10' href='https://www.linkedin.com/in/dulanwaduge/'
                             target='_blank'>
                 <BsLinkedin />
             </a>
-            <a className='bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full outline-none 
+            <a className='bg-white p-4 text-[#059669] flex items-center gap-2 text-[1.35rem] rounded-full outline-none 
                             focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition border border-black/10'
                             href='https://github.com/dulanwaduge' target='_blank'>
                 <FaGithubSquare />
