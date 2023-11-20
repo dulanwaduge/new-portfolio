@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, spring } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 
 export default function Header() {
-  const [activeSection, setActiveSection ] = useState('Home');
+  const [activeSection, setActiveSection] = useState("Home");
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -21,7 +21,7 @@ export default function Header() {
         <ul
           className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-emerald-200 sm:w-[initial]
                         sm:flex-nowrap sm:gap-5"
-          >
+        >
           {links.map((link) => (
             <motion.li
               className="h-3/4 flex items-center justify-center relative"
@@ -30,14 +30,24 @@ export default function Header() {
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", 
-                { "text-emerald-100": activeSection === link.name })}
+                className={clsx(
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition",
+                  { "text-emerald-100": activeSection === link.name }
+                )}
                 href={link.hash}
+                onClick={() => setActiveSection(link.name)}
               >
                 {link.name}
-                {
-                  link.name === activeSection && (
-                  <span className="bg-emerald-700 rounded-full absolute inset-0 -z-10"></span>
+                {link.name === activeSection && (
+                  <motion.span
+                    className="bg-emerald-700 rounded-full absolute inset-0 -z-10"
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 30,
+                    }}
+                  ></motion.span>
                 )}
               </Link>
             </motion.li>
