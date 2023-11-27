@@ -1,18 +1,22 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function About() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
   const { setActiveSection } = useActiveSectionContext();
 
-  if (inView) {
-    setActiveSection("About");
-  }
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("About");
+    }
+  }, [inView, setActiveSection]);
 
   return (
     <motion.section
@@ -20,7 +24,8 @@ export default function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id="about"
+      id="About"
+      ref={ref}
     >
       <SectionHeading>About me</SectionHeading>
 
@@ -45,7 +50,7 @@ export default function About() {
       </p>
 
       <p className="text-gray-400 text-md">
-        <span className="">When I'm not coding</span>, I enjoy building
+        <span className="">When I&apos;m not coding</span>, I enjoy building
         computers, mixing music, and playing eight-ball. I also enjoy{" "}
         <span className="text-gray-300">learning new things</span>. I am
         currently learning <span className="text-gray-300">Next.js</span>.
