@@ -4,9 +4,15 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function About() {
   const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  if (inView) {
+    setActiveSection("About");
+  }
 
   return (
     <motion.section
@@ -19,7 +25,7 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
 
       <p className="mb-3 text-gray-400 text-md">
-        I'm a passionate{" "}
+        I&apos;m a passionate{" "}
         <span className="text-gray-300">software developer</span>, with a fresh
         perspective and strong foundation in{" "}
         <span className="text-gray-300">full-stack development</span>. I
