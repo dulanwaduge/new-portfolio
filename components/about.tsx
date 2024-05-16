@@ -51,9 +51,7 @@ export default function About() {
 
       <p className="text-gray-400 text-md">
         <span className="">When I&apos;m not coding</span>, I enjoy building
-        computers, mixing music, and playing eight-ball. I also enjoy{" "}
-        <span className="text-gray-300">learning new things</span>. I am
-        currently learning <span className="text-gray-300">Next.js</span>.
+        computers, mixing music, and playing badminton.
       </p>
     </motion.section>
   );
